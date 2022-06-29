@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Capsico Delivery Partner</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="otp_desc">We have send you a 4 digit verification code on</string>
+    <string name="view_account">View Account</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="check_our_terms_conditions">Check our terms and Conditions</string>
+    <string name="check_your_payment">Check Your Payment</string>
+    <string name="check_your_profile">Check Your Profile</string>
+    <string name="check_our_privacy_policy">Check our privacy policy</string>
+    <string name="search_menu_title">Search</string>
+    <string name="setting">Settings</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="terms_and_condations">Terms and Conditions</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_choose_image_provider">Choose</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="change_your_setting">Change App Settings</string>
+</resources>

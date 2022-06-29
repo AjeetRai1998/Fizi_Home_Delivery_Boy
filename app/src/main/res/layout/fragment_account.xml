@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorAccent" android:layout_width="match_parent" android:layout_height="140dp">
+                    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/userPic" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/person"/>
+                    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/color_white" android:id="@+id/useName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text=""/>
+                    <TextView android:textSize="14dp" android:textColor="@color/oragne" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="view Account" android:layout_below="@+id/tv_user_name"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp">
+                    <RelativeLayout android:id="@+id/viewProfile" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_profile" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_user" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_account" android:layout_toRightOf="@+id/iv_profile" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_profile"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/check_your_profile"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/viewDocument" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_history" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_history_black" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Documents" android:layout_toRightOf="@+id/iv_history" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_history"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Vahicle Documents"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/orderHistory" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/payment" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order History" android:layout_toRightOf="@+id/iv_payment" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_payment"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="View order history "/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/restaurantReview" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/review" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Our Reviews" android:layout_toRightOf="@+id/iv_profile" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_profile"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="see reviews"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/managePayment" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_payment" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/payment" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manage Payments" android:layout_toRightOf="@+id/iv_payment" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_payment"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/check_your_payment"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/terms" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_terms" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/payment" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/terms_and_condations" android:layout_toRightOf="@+id/iv_terms" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_terms"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/check_our_terms_conditions"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/policy" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_privacy" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/privacy" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/privacy_policy" android:layout_toRightOf="@+id/iv_privacy" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_privacy"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/check_our_privacy_policy"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/rlt_setting" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iv_setting" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_settings" android:scaleType="fitStart" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true" android:layout_marginStart="40dp">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting" android:layout_toRightOf="@+id/iv_setting" android:layout_centerVertical="true" android:layout_toEndOf="@+id/iv_setting"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/change_your_setting"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <RelativeLayout android:id="@+id/about" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/account_id" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/about_us_icon" android:layout_centerVertical="true" android:backgroundTint="@color/contentTextColor"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_toRightOf="@+id/account_id" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/account_id">
+                            <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/contentTextColor" android:id="@+id/aboutcook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About "/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Check About us"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/logout" android:background="@color/colorPrimaryDark" android:padding="15dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOGOUT" android:layout_weight="1"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logout"/>
+                    </LinearLayout>
+                    <TextView android:textSize="13dp" android:textColor="@color/gray3" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="30dp" android:text="App version 2.0."/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

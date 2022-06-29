@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fcfbfb"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="20dp" android:layout_marginRight="10dp">
+            <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/dashboard_img"/>
+            <TextView android:textSize="18dp" android:textColor="@color/pure_black" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Dashboard" android:layout_weight="1" android:fontFamily="@font/roboto"/>
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/filterText" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="18dp" android:textColor="@color/pure_black" android:id="@+id/txtFilter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Today" android:fontFamily="@font/roboto"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_baseline_arrow_right_alt_24" android:rotation="90"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+            <androidx.cardview.widget.CardView android:id="@+id/cardSales" android:layout_width="150dp" android:layout_height="95dp" android:layout_margin="10dp" android:layout_weight="1" app:cardBackgroundColor="#52dcdcdc" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount Delivered"/>
+                    <TextView
+                        android:textSize="26dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/sales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="₹ 0"/>
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/salesProgressBar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/cardEarning" android:layout_width="150dp" android:layout_height="95dp" android:layout_margin="10dp" android:layout_weight="1" app:cardBackgroundColor="#52dcdcdc" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Earnings"/>
+                    <TextView android:textSize="26dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/earning"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 0"/>
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/earningProgressBar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:id="@+id/cardOrders" android:layout_width="150dp" android:layout_height="95dp" android:layout_margin="10dp" android:layout_weight="1" app:cardBackgroundColor="#52dcdcdc" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login Hours"/>
+                    <TextView android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/loginHours"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 mins"/>
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/ordersProgressBar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/cardRejectedOrders" android:layout_width="150dp" android:layout_height="95dp" android:layout_margin="10dp" android:layout_weight="1" app:cardBackgroundColor="#52dcdcdc" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Orders Delivered"/>
+                    <TextView android:textSize="26dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/rejectedOrders"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/rejectedProgressBar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardBackgroundColor="#52dcdcdc" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/setting_img"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_weight="1">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delivery Duty Control"/>
+                    <TextView android:textSize="23dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start Duty" android:fontFamily="@font/roboto"/>
+                </LinearLayout>
+                <com.suke.widget.SwitchButton android:id="@+id/switchButton" android:layout_width="80dp" android:layout_height="40dp" app:sb_checked_color="@color/color_green"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@+id/cardWallet" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardBackgroundColor="#52fbe3e3" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/wallet_img"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_weight="1">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Earning Balance"/>
+                    <TextView android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/walletAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="₹ 0" android:fontFamily="@font/roboto"/>
+                    <TextView android:textSize="10dp" android:textStyle="bold" android:textColor="@color/color_green" android:id="@+id/msgEarning" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This amount will be settle to you bank account at the weekend" android:fontFamily="@font/roboto"/>
+
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/walletAmountProgress"/>
+                </LinearLayout>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@+id/cardProducts" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardBackgroundColor="#52fbe3e3" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/money_img"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_weight="1">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cash in hand"/>
+                    <TextView android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/floatingCash"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 0" android:fontFamily="@font/roboto"/>
+                    <TextView android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"
+                        android:id="@+id/msgFloat"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 0"
+                        android:fontFamily="@font/roboto"/>
+
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/floatingProgressBar"/>
+                </LinearLayout>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        android:id="@+id/cardIncentive"
+        app:cardBackgroundColor="@color/pure_black"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:contentPadding="2dp">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Target"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/pure_black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11am - 10pm"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/gray4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/noOfOrders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="#E6E6E6"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/gray4"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/orderEarning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\u20b90"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="#E6E6E6"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Pay"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/gray4"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/incentive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\u20b90"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="#E6E6E6"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Incentive Pay"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/gray4"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/color_green"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="85dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Incentive Pay"
+                            android:textStyle="bold"
+                            android:textSize="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray4"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Orders"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray4"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/incentiveList"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txtIncentive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Congratulations! You earned \u20b90 as incentive"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="10dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/color_blue"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardBackgroundColor="#52fbe3e3" app:cardCornerRadius="0dp" app:cardElevation="0dp" app:contentPadding="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/cardvac" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_baseline_security_24" android:tint="@color/pure_black"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_weight="1">
+                    <TextView android:textSize="16dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vaccination"/>
+                    <TextView android:textSize="17dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/vaccinationMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:fontFamily="@font/roboto"/>
+                </LinearLayout>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

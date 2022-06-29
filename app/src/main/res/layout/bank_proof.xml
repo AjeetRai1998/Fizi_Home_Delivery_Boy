@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" app:contentPadding="5dp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/gray0" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payment of Rs. 50" android:fontFamily="@font/roboto"/>
+            <TextView android:textSize="13dp" android:textColor="@color/gray5" android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date : 120202002" android:fontFamily="@font/roboto"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/gray0" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_weight="1">
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Note : " android:fontFamily="@font/roboto"/>
+            <TextView android:textSize="12dp" android:textColor="@color/red" android:id="@+id/remark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date : 120202002" android:layout_weight="1" android:fontFamily="@font/roboto"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+            <LinearLayout android:background="@color/color_green" android:padding="5dp" android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginRight="10dp" android:layout_weight="1">
+                <ImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/person" android:scaleType="centerCrop"/>
+            </LinearLayout>
+            <TextView android:textSize="10dp" android:textColor="@color/color_white" android:gravity="center" android:id="@+id/download" android:background="@color/color_green" android:padding="5dp" android:layout_width="60dp" android:layout_height="wrap_content" android:text="Download\10Proof"/>
+        </LinearLayout>. 
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

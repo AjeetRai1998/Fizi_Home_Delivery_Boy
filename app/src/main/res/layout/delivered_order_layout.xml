@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/neworder_itemback" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginHorizontal="10dp">
+            <TextView android:textSize="13dp" android:id="@+id/customername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="customer name"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp">
+            <TextView android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/pure_black"
+                android:id="@+id/orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Chine Street"
+                android:layout_weight="1"/>
+            <TextView android:textSize="13dp"
+                android:textStyle="bold" android:textColor="@color/gray4"
+                android:id="@+id/date" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text=""/>
+        </LinearLayout>
+        <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginHorizontal="10dp"/>
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Type:"/>
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:id="@+id/paymentType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/txtMethod"
+                android:textSize="16dp"
+                android:textColor="@color/pure_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount - "/>
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/totalAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Trip Distance : "
+                android:textColor="@color/pure_black"
+                android:textSize="16dp"/>
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/product" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="16dp"
+                android:textColor="@color/pure_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earning : "/>
+            <TextView android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/pure_black"
+                android:id="@+id/totalEarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+            <com.google.android.material.button.MaterialButton android:textSize="20dp" android:textColor="@color/color_green" android:id="@+id/viewOrder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="view order" android:layout_weight="1" app:backgroundTint="@color/GreenLIte"/>
+            <com.google.android.material.button.MaterialButton android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Track Order" android:layout_weight="1" app:backgroundTint="@color/color_blue"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

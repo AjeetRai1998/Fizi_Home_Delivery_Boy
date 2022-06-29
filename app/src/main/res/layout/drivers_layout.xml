@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/card" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/color_white" app:contentPadding="10dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="20dp" android:textColor="@color/pure_black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select Drivers" android:fontFamily="@font/roboto"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/drivers_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_weight="1"/>
+            <com.skydoves.elasticviews.ElasticButton android:textSize="15dp" android:textColor="@color/pure_black" android:id="@+id/done" android:background="@drawable/outline_rounded_corners" android:layout_width="match_parent" android:layout_height="35dp" android:layout_margin="10dp" android:text="Assign" android:backgroundTint="@color/colorAccent" app:button_duration="200" app:button_scale="0.93"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/data_found" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/line1">
+                <ImageView android:background="@drawable/delivery_boy" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="50dp" android:backgroundTint="@color/colorPrimary"/>
+                <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/colorAccent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="No delivery Boy Available in your area !" android:fontFamily="sans-serif"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

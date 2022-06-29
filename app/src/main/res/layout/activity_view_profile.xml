@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="#fffffe" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/line" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+            <com.google.android.material.appbar.MaterialToolbar android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                    <ImageButton android:id="@+id/back" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_arrow" app:tint="@color/color_black"/>
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/color_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Your Profile" android:fontFamily="@font/roboto"/>
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/design_for_edit_profile" android:layout_width="match_parent" android:layout_height="150dp">
+                    <RelativeLayout android:layout_gravity="center" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/userPhoto" android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/person"/>
+                        <ImageButton android:id="@+id/addPhoto" android:background="@color/transparent" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp" android:src="@drawable/ic_edit_round_black" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp">
+                        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray3" android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" app:startIconDrawable="@drawable/persons" app:startIconTint="@color/color_blue" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/contentTextColor" android:textColorHint="@color/gray3" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Name" android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray3" android:id="@+id/mobile" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" app:startIconDrawable="@drawable/phone" app:startIconTint="@color/color_blue" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText android:enabled="false" android:textColor="@color/contentTextColor" android:textColorHint="@color/gray3" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="Mobile" android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray3" android:id="@+id/emailId" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" app:startIconDrawable="@drawable/email" app:startIconTint="@color/color_blue" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/contentTextColor" android:textColorHint="@color/gray3" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="Email id" android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray3" android:id="@+id/address" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" app:startIconDrawable="@drawable/email" app:startIconTint="@color/color_blue" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/contentTextColor" android:textColorHint="@color/gray3" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="Address" android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray3" android:id="@+id/description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:hint="Description" app:startIconDrawable="@drawable/description" app:startIconTint="@color/color_blue" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/contentTextColor" android:textColorHint="@color/gray3" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/updateProfile" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Update Profile" app:cornerRadius="30dp"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/photoUpdate" android:padding="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Update Photo" app:cornerRadius="30dp"/>
+                        <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+                        <RelativeLayout android:paddingLeft="15dp" android:paddingRight="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="1dp">
+                            <TextView android:textSize="17sp" android:textStyle="normal" android:textColor="@color/contentTextColor" android:id="@+id/change_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password" android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

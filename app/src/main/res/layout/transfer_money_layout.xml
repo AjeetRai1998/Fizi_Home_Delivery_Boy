@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" app:cardCornerRadius="10dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@+id/loadProgress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:src="@drawable/close_button" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Deposit cash in hand"/>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:orientation="horizontal"
+              android:background="@drawable/outline_bg"
+              android:gravity="center_vertical">
+              <RadioGroup
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical"
+                  android:id="@+id/radioType">
+
+                  <RadioButton
+                      android:id="@+id/radio_influencer"
+                      android:layout_weight="1"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="  Pay in full"
+                      android:fontFamily="sans-serif"
+                      android:checked="true"
+                      android:textColor="@color/pure_black"
+                      android:button="@drawable/radio_btn"
+                      android:textSize="15dp" />
+
+                  <View
+                      android:layout_width="match_parent"
+                      android:background="@color/gray3"
+                      android:layout_height="1dp"/>
+                  <RadioButton
+                      android:id="@+id/radio_normal"
+                      android:layout_weight="1"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="  Custom Amount"
+                      android:fontFamily="sans-serif"
+                      android:checked="false"
+                      android:textColor="@color/pure_black"
+                      android:button="@drawable/radio_btn"
+                      android:textSize="15dp" />
+              </RadioGroup>
+          </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginTop="10dp"
+               android:orientation="horizontal"
+               android:gravity="bottom">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="\u20b9"
+                   android:textSize="35dp"
+                   android:textStyle="bold"
+                   android:textColor="@color/pure_black"
+                   android:fontFamily="@font/roboto"/>
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/pure_black"
+                   android:textStyle="bold"
+                   android:inputType="number"
+                   android:layout_marginLeft="10dp"
+                   android:backgroundTint="@android:color/transparent"
+                   android:fontFamily="@font/roboto"
+                   android:id="@+id/money"
+                   android:textSize="30dp"/>
+           </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="-10dp"
+                android:background="@color/gray1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/color_white"
+                android:layout_gravity="center"
+                android:id="@+id/submit"
+                android:background="@color/color_blue"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/skyBluw"
+                android:text="Pay Money" app:cornerRadius="20dp"/>
+            </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

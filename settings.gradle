@@ -1,0 +1,2 @@
+rootProject.name = "Capsico Delivery Boy"
+include ':app'

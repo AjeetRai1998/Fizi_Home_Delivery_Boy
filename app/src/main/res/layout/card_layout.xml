@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_weight="1" app:cardCornerRadius="5dp" app:cardElevation="4dp" app:contentPadding="15dp">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/image" android:background="@drawable/earnigs" android:layout_width="40dp" android:layout_height="40dp" android:backgroundTint="@color/oragne"/>
+        <TextView android:textSize="16dp" android:textColor="@color/pure_black" android:id="@+id/todayEarning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$30641"/>
+        <TextView android:textSize="15dp" android:textColor="@color/color_black" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today Earnings"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

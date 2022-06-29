@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Make sure to collect all the items"
+            android:textColor="@color/color_blue"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/lineOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Enter OTP"
+                android:textColor="@color/pure_black"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/otpPinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:cursorVisible="true"
+                android:hint="****"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textColorHint="@color/gray1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cursorColor="@color/pure_black"
+                app:cursorWidth="2dp"
+                app:itemCount="4"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="7dp"
+                app:itemWidth="48dp"
+                app:lineColor="@color/pure_black"
+                app:lineWidth="1dp"
+                app:viewType="rectangle" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Submit" />
+
+    </LinearLayout>
+    <ImageView android:id="@+id/close"
+        android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="16dp" android:src="@drawable/close_button" android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="#edeaea" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/line" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <com.google.android.material.appbar.MaterialToolbar android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                <ImageButton android:id="@+id/back" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_arrow" android:onClick="goToBack" app:tint="@color/color_black"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/color_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="My Wallet" android:fontFamily="@font/roboto"/>
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_below="@+id/line">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/earnLayout" android:background="@color/color_white" android:paddingLeft="20dp" android:paddingTop="30dp" android:paddingRight="20dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/my_wallet" app:tint="@color/colorAccent"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_weight="1">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/color_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your Earning Balance" android:layout_weight="1" android:fontFamily="@font/roboto"/>
+                            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/color_black" android:id="@+id/money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 0" android:fontFamily="@font/roboto"/>
+                        </LinearLayout>
+                        <TextView android:textSize="14sp" android:textColor="@color/color_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="This is your Wallet amount" android:fontFamily="@font/roboto"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@+id/withdraw_money" android:background="@color/color_white" android:padding="10dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/withdrawMoney" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="16sp" android:textColor="@color/color_green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="See bank deposit proof" android:drawablePadding="10dp" android:layout_weight="1"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" app:tint="@color/pure_black"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/fLayout" android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="20dp" android:paddingTop="30dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                        <ImageView
+                            android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30dp" android:src="@drawable/my_wallet" app:tint="@color/oragne"/>
+                        <LinearLayout android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/color_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available Limit" android:layout_weight="1" android:fontFamily="@font/roboto"/>
+                                <TextView android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/color_black"
+                                    android:id="@+id/cashWallet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rs 0" android:fontFamily="@font/roboto"/>
+                            </LinearLayout>
+                            <TextView android:textSize="14sp"
+                                android:textColor="@color/color_black"
+                                android:id="@+id/cashLimit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 0"
+                                android:fontFamily="@font/roboto"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        android:id="@+id/seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:isb_max="100"
+                        app:isb_min="0"
+                        android:layout_marginTop="10dp"
+                        app:isb_progress="0"
+                        app:isb_seek_smoothly="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="15dp"
+                        app:isb_show_tick_marks_type="oval"
+                        app:isb_tick_marks_size="13dp"
+                        app:isb_show_tick_texts="true"
+                        app:isb_tick_texts_size="15sp"
+                        app:isb_tick_texts_color="@color/gray4"
+                        app:isb_thumb_color="@color/skyBluw"
+                        app:isb_thumb_size="20dp"
+                        app:isb_tick_marks_color="@color/color_white"
+                        app:isb_show_indicator="rounded_rectangle"
+                        app:isb_indicator_color="@color/skyBluw"
+                        app:isb_indicator_text_color="@color/skyBluw"
+                        app:isb_indicator_text_size="18sp"
+                        app:isb_track_background_color="@color/gray1"
+                        app:isb_track_background_size="4dp"
+                        app:isb_track_progress_color="@color/skyBluw"
+                        app:isb_track_progress_size="4dp"
+                        app:isb_only_thumb_draggable="false"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u20b90"
+                            android:layout_weight="1"
+                            android:textColor="@color/gray4"
+                            android:textSize="13dp"/>
+                        <TextView
+                            android:id="@+id/limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u20b90"
+                            android:textColor="@color/gray4"
+                            android:textSize="13dp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray1"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cash In Hand" android:layout_weight="1" android:fontFamily="@font/roboto"/>
+                        <TextView android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_black"
+                            android:id="@+id/inHand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 0" android:fontFamily="@font/roboto"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deposit cash when reach limit"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/gray4"
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:id="@+id/transferMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:layout_margin="20dp"
+                        android:textSize="17dp"
+                        android:textColor="@color/color_white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto"
+                        android:text="PAY ONLINE"
+                        android:backgroundTint="#4cb050"
+                        android:background="@color/color_green"/>
+                    <TextView android:textSize="13dp"
+                        android:textColor="@color/red"
+                        android:layout_gravity="center"
+                        android:id="@+id/viewCashTransferHistory"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View Floating Cash Deposit History"/>
+
+                </LinearLayout>
+                <LinearLayout android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/transaction_history"
+                    android:background="@color/color_white"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text=" Your Transaction History"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/transaction_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/loading1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/logo"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/cod_history" android:background="@color/color_white" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <TextView
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text=" Your Floating Cash History"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/floating_cash_list"/>
+                        <ImageView
+                            android:id="@+id/loading"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/logo"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@+id/add_money" android:background="@color/color_white" android:padding="10dp" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="16sp" android:textColor="@color/oragne" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Add Money" android:drawableLeft="@drawable/add_icon" android:drawablePadding="10dp" android:layout_weight="1" android:drawableTint="@color/color_blue"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" app:tint="@color/color_blue"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

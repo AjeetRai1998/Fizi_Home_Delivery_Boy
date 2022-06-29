@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_arrow"/>
+                <TextView android:textSize="18sp" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="KYC status"/>
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/app_bar">
+        <ImageView android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="200dp" android:src="@drawable/kyc"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="20dp" android:src="@drawable/ic_check" app:tint="@color/color_green"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="KYC Details Submitted"/>
+        </LinearLayout>
+        <View android:background="@color/color_blue" android:layout_width="2dp" android:layout_height="100dp" android:layout_marginLeft="35dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="20dp" android:src="@drawable/about_us_icon" app:tint="@color/red"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Verification Pending"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/color_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70dp" android:layout_marginTop="10dp" android:text="Can take up to 4-5 days"/>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="40sp" android:textColor="@color/gray1" android:layout_gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Capsico" android:fontFamily="@font/roboto"/>
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/restaurant" android:alpha="0.1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

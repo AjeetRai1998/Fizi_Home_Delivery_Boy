@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/neworder_itemback" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+            <TextView android:textSize="13dp" android:textStyle="bold" android:textColor="@color/color_blue" android:id="@+id/delivery_time" android:background="@drawable/outline_bg" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="Cash On Delivery - Collect " android:singleLine="true" android:layout_weight="1"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:id="@+id/customorName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Customer name"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16dp"
+                    android:visibility="gone" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/orderid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Order -  " android:layout_weight="1"/>
+                <TextView android:textSize="15dp" android:textColor="@color/color_black" android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:text=""/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_weight="1" android:layout_marginHorizontal="5dp"/>
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Type:"/>
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:id="@+id/paymentType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="   UPI" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="16dp"
+                 android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pickup From  -  "/>
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/storeInformation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="2" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="16dp"
+                android:textColor="@color/pure_black"
+                android:id="@+id/yourEarning"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Expected Earning - "/>
+            <TextView android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/pure_black" android:id="@+id/earning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal"
+            android:id="@+id/lineCustAddreess"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="16dp"
+                 android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Customer Address -  "/>
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/userInformation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+            android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order Amount:  "/>
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:id="@+id/totalAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <Button android:textColor="@color/AccentDark"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/orderDetails"
+            android:visibility="gone" android:background="@drawable/rounded_withe" android:layout_width="wrap_content" android:layout_height="35dp" android:layout_marginTop="5dp" android:text="Order Details" app:backgroundTint="@color/AccentLite"/>
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Products:   "/>
+            <TextView android:textSize="14dp" android:textColor="@color/pure_black" android:id="@+id/product" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Milk Bottle 1X, Dahi 1Pc, Aaloo Paratha 2Pc." android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView android:textSize="15dp"
+            android:textColor="@color/red"
+            android:id="@+id/method"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="COD"
+            android:singleLine="true"/>
+        <LinearLayout
+            android:id="@+id/lineDelConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/itemsGivenCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline_bg"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Given orders to customer"
+                android:textSize="10dp"
+                android:paddingLeft="5dp"/>
+            <CheckBox
+                android:id="@+id/cashCollectedCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline_bg"
+                android:layout_margin="5dp"
+                android:text="Cash Collected"
+                android:textSize="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <com.ncorti.slidetoact.SlideToActView
+                android:id="@+id/markAsDeliverd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:layout_weight="1"
+                app:area_margin="7dp"
+                app:slider_icon="@drawable/ic_baseline_double_arrow_24"
+                app:slider_icon_color="@color/pure_black"
+                app:icon_margin="5dp"
+                app:animation_duration="250"
+                app:outer_color="@color/color_green"
+                app:inner_color="@color/color_white"
+                app:border_radius="0dp"
+                android:layout_margin="5dp"
+                app:text="Slide to accept order"
+                app:text_size="15dp"
+                app:slider_height="50dp"
+                app:slider_locked="false" />
+            <LinearLayout
+                android:id="@+id/goToStore"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:background="@color/color_blue"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:tint="@color/color_white"
+                    android:src="@drawable/gps"
+                    />
+                <TextView
+                    android:id="@+id/txtGotoStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Store"
+                    android:textColor="@color/color_white"
+                    android:textSize="10dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/goToUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:background="@color/color_blue"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:tint="@color/color_white"
+                    android:src="@drawable/gps"
+                    />
+                <TextView
+                    android:id="@+id/txtgoToUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer"
+                    android:textColor="@color/color_white"
+                    android:textSize="10dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <TextView android:textSize="13dp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:id="@+id/notice"
+            android:background="@drawable/outline_bg"
+            android:padding="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Cash On Delivery - Collect " android:singleLine="true" android:layout_weight="1"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal" android:id="@+id/lineAltNo" android:paddingLeft="0dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+            <TextView android:textSize="13dp" android:textStyle="bold" android:textColor="@color/red" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Call to Customer" android:singleLine="true"/>
+            <ImageView android:id="@+id/callUser" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/call_icon"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

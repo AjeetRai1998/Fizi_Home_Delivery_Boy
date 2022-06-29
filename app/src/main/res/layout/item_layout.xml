@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/burger"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp">
+            <TextView android:textSize="15dp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Burger King"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="10dp">
+        <LinearLayout android:orientation="horizontal" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="25dp" android:layout_height="25dp"/>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp">
+                <TextView android:textSize="15dp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Veg Whopper + Veg"/>
+                <TextView android:textSize="13dp" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Regular Fries"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quantity: "/>
+                <TextView android:textStyle="bold" android:textColor="@color/pure_black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Price: "/>
+                <TextView android:textStyle="bold" android:textColor="@color/pure_black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

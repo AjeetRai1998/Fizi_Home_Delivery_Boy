@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="#fbf7f7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/match" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_scrollFlags="scroll">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/back_arrow"/>
+                <TextView android:textSize="16sp" android:textColor="@color/pure_black" android:id="@+id/toolbarText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Reviews"/>
+            </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/reviewList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/match"/>
+    <TextView android:textSize="17sp" android:textColor="@color/color_blue" android:id="@+id/noTxt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Review Found" android:layout_centerInParent="true"/>
+</RelativeLayout>

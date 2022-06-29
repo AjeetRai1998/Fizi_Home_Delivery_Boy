@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/new_order_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center" android:id="@+id/lottieAnimation" android:visibility="gone" android:layout_width="200dp" android:layout_height="200dp"
+                app:lottie_autoPlay="true" app:lottie_fileName="ripple.json" app:lottie_loop="true"/>
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/color_blue" android:layout_gravity="center" android:id="@+id/noTxt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Searching For New Orders...." android:layout_centerInParent="true"/>
+        </LinearLayout>
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

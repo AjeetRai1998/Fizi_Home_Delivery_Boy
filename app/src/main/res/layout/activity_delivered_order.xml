@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/match" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_scrollFlags="scroll">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/back_arrow"/>
+                <TextView android:textSize="16sp" android:textColor="@color/pure_black" android:id="@+id/toolbarText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Order History"/>
+            </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/match">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/person"/>
+                    <TextView android:textSize="16dp" android:textColor="@color/pure_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Atul maurya"/>
+                </LinearLayout>
+                <TextView android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:text="    +91 9108000000" android:drawableLeft="@drawable/ic_baseline_call_24"/>
+                <TextView android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="    user12345@gmail.com" android:drawableLeft="@drawable/ic_baseline_email_24"/>
+            </LinearLayout>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_margin="10dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+                <com.google.android.material.button.MaterialButton android:id="@+id/viewOrder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="View Order" android:layout_weight="1" app:backgroundTint="@color/color_green"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/trackOrder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Track Order" android:layout_weight="1" app:backgroundTint="@color/color_blue"/>
+            </LinearLayout>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_margin="10dp"/>
+            <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Items"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/itemList" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View android:background="@color/color_black" android:layout_width="match_parent" android:layout_height="1dp" android:layout_margin="10dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+                <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Amount" android:layout_weight="1"/>
+                <TextView android:textSize="18dp" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginBottom="30dp" android:text="₹322"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
