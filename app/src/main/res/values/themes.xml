@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.CapsicoDeliveryBoy" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/oragne</item>
-        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/pure_black</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>

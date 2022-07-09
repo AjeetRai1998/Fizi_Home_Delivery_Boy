@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Capsico Delivery Partner</string>
+    <string name="app_name">Hungerji Delivery Partner</string>
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="otp_desc">We have send you a 4 digit verification code on</string>
     <string name="view_account">View Account</string>

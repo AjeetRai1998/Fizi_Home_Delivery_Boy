@@ -78,7 +78,7 @@ public class OfflineFragment extends Fragment {
     double loginHour = 0.0d;
     int changeStatus = 0;
     int cashwalletlimitstatus = 0;
-  public static   int totalDeliveredOrder = 0,todayEarning=0;
+    public static   int totalDeliveredOrder = 0,todayEarning=0;
     int totalIncentiveAmount = 0;
     TextView txtIncentive;
 
@@ -100,6 +100,7 @@ public class OfflineFragment extends Fragment {
         txtIncentive=view.findViewById(R.id.txtIncentive);
         this.activity = getActivity();
         this.decim = new DecimalFormat("#");
+
         this.binding.switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() { // from class: digi.coders.capsicodeliverypartner.fragment.OfflineFragment.1
             @Override // com.suke.widget.SwitchButton.OnCheckedChangeListener
             public void onCheckedChanged(SwitchButton view2, boolean isChecked) {
@@ -108,12 +109,12 @@ public class OfflineFragment extends Fragment {
                 } else if (OfflineFragment.this.changeStatus == 0) {
                     OfflineFragment.this.changeStatus = 1;
                     if (isChecked) {
-                        OfflineFragment.this.updateStatus("true");
+                        updateStatus("true");
                     } else {
-                        OfflineFragment.this.updateStatus("false");
+                       updateStatus("false");
                     }
                 } else {
-                    OfflineFragment.this.changeStatus = 0;
+                   changeStatus = 0;
                 }
             }
         });
@@ -528,9 +529,11 @@ public class OfflineFragment extends Fragment {
                             binding.floatingProgressBar.setVisibility(View.GONE);
                             binding.sales.setVisibility(View.VISIBLE);
                             binding.earning.setVisibility(View.VISIBLE);
+//                            binding.txtMsg.setVisibility(View.VISIBLE);
                             binding.floatingCash.setVisibility(View.VISIBLE);
                             binding.rejectedOrders.setVisibility(View.VISIBLE);
                             binding.walletAmount.setVisibility(View.VISIBLE);
+                            binding.loginHours.setVisibility(View.VISIBLE);
                         }
                         loadTransactionList();
                     } catch (Exception e) {
@@ -673,10 +676,10 @@ public class OfflineFragment extends Fragment {
                                         if (!arrayList.get(i).getAmount().equalsIgnoreCase("")) {
                                             totalIncentiveAmount = totalIncentiveAmount + Integer.parseInt(arrayList.get(i).getAmount());
                                         }
-                                        if (totalIncentiveAmount != 0) {
+                                        if (totalIncentiveAmount > 0) {
                                             txtIncentive.setText("Congratulations! You earned \u20b9" + totalIncentiveAmount + " as incentive");
                                             binding.incentive.setText("\u20b9" + totalIncentiveAmount + "");
-                                           txtIncentive.setVisibility(View.VISIBLE);
+                                            txtIncentive.setVisibility(View.VISIBLE);
                                         } else {
                                             txtIncentive.setVisibility(View.GONE);
                                             binding.incentive.setText("\u20b90");
@@ -692,7 +695,7 @@ public class OfflineFragment extends Fragment {
                             binding.incentiveList.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
                             binding.incentiveList.setHasFixedSize(true);
                             binding.incentiveList.setAdapter(new IncelistAdapterAdapter(arrayList,getActivity()));
-                           binding.cardIncentive.setVisibility(View.VISIBLE);
+                            binding.cardIncentive.setVisibility(View.VISIBLE);
                         }else{
                             binding.cardIncentive.setVisibility(View.GONE);
                         }

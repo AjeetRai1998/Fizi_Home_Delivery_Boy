@@ -2,12 +2,20 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:contentPadding="5dp"
     android:layout_margin="10dp">
-    <LinearLayout android:orientation="vertical" android:background="@drawable/neworder_itemback" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
             <TextView android:textSize="13dp" android:textStyle="bold" android:textColor="@color/color_blue" android:id="@+id/delivery_time" android:background="@drawable/outline_bg" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="Cash On Delivery - Collect " android:singleLine="true" android:layout_weight="1"/>
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
                 <TextView android:id="@+id/customorName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Customer name"/>
@@ -128,7 +136,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
-                android:background="@color/color_blue"
+                android:background="@color/color_black"
                 android:gravity="center">
                 <ImageView
                     android:layout_width="25dp"
@@ -150,7 +158,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
-                android:background="@color/color_blue"
+                android:background="@color/colorAccent"
                 android:gravity="center">
                 <ImageView
                     android:layout_width="25dp"

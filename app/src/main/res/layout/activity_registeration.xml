@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/colorAccent" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/appbar" android:background="@color/colorAccent" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/pure_black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/appbar" android:background="@color/pure_black" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll">
         <RelativeLayout android:layout_width="match_parent" android:layout_height="220dp">
             <ImageView android:id="@+id/goBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:src="@drawable/back_arrow" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:tint="@color/pure_black"/>
-            <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:src="@drawable/splash_icon"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/hungerji_logo" />
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
                 <ImageView android:layout_gravity="center" android:visibility="gone" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/logo"/>
                 <TextView android:textSize="25sp" android:textColor="@color/pure_black" android:layout_gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="Register Here  " android:layout_centerInParent="true"/>

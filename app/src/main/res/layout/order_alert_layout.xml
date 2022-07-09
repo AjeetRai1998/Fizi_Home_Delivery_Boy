@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#dcdcdc" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:backgroundTint="@color/colorAccent">
     <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/color_white" android:gravity="center" android:background="@color/pure_black" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Order Received" android:fontFamily="@font/roboto"/>
+        <TextView android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/pure_black"
+            android:gravity="center"
+            android:background="@drawable/rect_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Order Received"
+            android:fontFamily="@font/roboto"/>
         <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/color_white" android:gravity="right" android:id="@+id/time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TIme" android:layout_weight="1" android:fontFamily="@font/roboto"/>
     </LinearLayout>
     <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
@@ -9,11 +21,28 @@
         <TextView android:textSize="28sp" android:textStyle="bold"
             android:textColor="@color/color_white" android:id="@+id/productPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="₹80"/>
     </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:background="@color/pure_black" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/pure_black"
+        app:contentPadding="5dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <TextView android:textSize="20dp" android:textColor="@color/color_white" android:gravity="center" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pickup From" android:fontFamily="@font/roboto"/>
         <View android:background="@color/color_white" android:layout_width="match_parent" android:layout_height="1dp"/>
         <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/color_white" android:gravity="center" android:id="@+id/name" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pickup From" android:fontFamily="@font/roboto"/>
         <TextView android:textSize="17dp" android:textColor="@color/color_white" android:gravity="center" android:id="@+id/address" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pickup From" android:fontFamily="@font/roboto"/>
     </LinearLayout>
-    <com.skydoves.elasticviews.ElasticButton android:textSize="15dp" android:textColor="@color/colorAccent" android:layout_gravity="center" android:id="@+id/ok" android:background="@drawable/rouned_bg" android:layout_width="100dp" android:layout_height="40dp" android:layout_margin="20dp" android:text="Got It !" android:fontFamily="@font/roboto" android:backgroundTint="@color/color_white" app:button_duration="200" app:button_scale="0.93"/>
+    </androidx.cardview.widget.CardView>
+    <com.skydoves.elasticviews.ElasticButton
+        android:textSize="15dp"
+        android:textColor="@color/pure_black"
+        android:layout_gravity="center"
+        android:id="@+id/ok"
+        android:background="@drawable/rouned_bg"
+        android:layout_width="100dp" android:layout_height="40dp" android:layout_margin="20dp" android:text="Got It !" android:fontFamily="@font/roboto" android:backgroundTint="@color/color_white" app:button_duration="200" app:button_scale="0.93"/>
 </LinearLayout>

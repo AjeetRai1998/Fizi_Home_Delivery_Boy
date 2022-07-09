@@ -95,7 +95,7 @@
             android:exported="false"
             android:name="digi.coders.capsicodeliverypartner.activity.LoginActivity"
             android:screenOrientation="portrait"/>
-        <activity android:theme="@style/introtheme"
+        <activity
             android:name="digi.coders.capsicodeliverypartner.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:exported="true">

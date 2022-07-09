@@ -268,7 +268,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
-   public static String baseAmount="",baseKm="",delCharge="";
+   public static String baseAmount="",baseKm="0",delCharge="0";
     public void getDelCharge() {
         String ven = this.singleTask.getValue("boy");
         DeliveryPartner deliveryPartner = (DeliveryPartner) new Gson().fromJson(ven,  DeliveryPartner.class);

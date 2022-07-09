@@ -133,7 +133,7 @@ public interface MyApi {
     Call<JsonArray> photoUpdate(@Field("delivery_boy_id") String id, @Field("icon") String icon);
 
     @FormUrlEncoded
-    @POST(Scopes.PROFILE)
+    @POST("profile")
     Call<JsonArray> profile(@Field("delivery_boy_id") String deliveryBoyId);
 
     @FormUrlEncoded

@@ -3,9 +3,17 @@
     <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
         <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorAccent" android:layout_width="match_parent" android:layout_height="140dp">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
                     <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/userPic" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/person"/>
-                    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/color_white" android:id="@+id/useName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text=""/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"
+                        android:id="@+id/useName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text=""/>
                     <TextView android:textSize="14dp" android:textColor="@color/oragne" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="view Account" android:layout_below="@+id/tv_user_name"/>
                 </LinearLayout>
             </LinearLayout>
@@ -92,9 +100,24 @@
                         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tint="@color/color_blue"/>
                     </RelativeLayout>
                     <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
-                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/logout" android:background="@color/colorPrimaryDark" android:padding="15dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
-                        <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="@color/pure_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOGOUT" android:layout_weight="1"/>
-                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logout"/>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@+id/logout"
+                        android:background="@drawable/rect_bg"
+                        android:backgroundTint="@color/colorAccent"
+                        android:padding="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="16dp" android:textStyle="bold" android:textColor="@color/color_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOGOUT" android:layout_weight="1"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logout"
+                            android:tint="@color/color_white"/>
                     </LinearLayout>
                     <TextView android:textSize="13dp" android:textColor="@color/gray3" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="30dp" android:text="App version 2.0."/>
                 </LinearLayout>

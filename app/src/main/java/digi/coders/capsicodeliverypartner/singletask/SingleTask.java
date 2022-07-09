@@ -10,8 +10,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /* loaded from: classes7.dex */
 public class SingleTask extends Application {
-    public static final String BASE_URL = "http://designerpriya.com/DeliveryBoyTest/";
-    public static final String BASE_URL1 = "http://designerpriya.com/";
+    public static final String BASE_URL = "https://hungerji.com/DeliveryBoyTest/";
+    public static final String BASE_URL1 = "https://hungerji.com/";
     private Retrofit retrofit;
     private Retrofit retrofit1;
 
@@ -25,7 +25,7 @@ public class SingleTask extends Application {
             retrofit = new Retrofit.Builder().baseUrl(BASE_URL).client(client).addConverterFactory(GsonConverterFactory.create()).build();
         }
         if (retrofit1 == null) {
-            retrofit1 = new Retrofit.Builder().baseUrl("http://designerpriya.com/").client(client).addConverterFactory(GsonConverterFactory.create()).build();
+            retrofit1 = new Retrofit.Builder().baseUrl("https://hungerji.com/").client(client).addConverterFactory(GsonConverterFactory.create()).build();
         }
     }
 

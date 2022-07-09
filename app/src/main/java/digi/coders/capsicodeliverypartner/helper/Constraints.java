@@ -2,8 +2,8 @@ package digi.coders.capsicodeliverypartner.helper;
 
 /* loaded from: classes5.dex */
 public class Constraints {
-    public static final String BASE_URL = "http://designerpriya.com/assets/uploads/";
-    public static final String BASE_URL1 = "http://designerpriya.com/";
+    public static final String BASE_URL = "https://hungerji.com/assets/uploads/";
+    public static final String BASE_URL1 = "https://hungerji.com/";
     public static final String DELIVERY_BOY = "delivery_boy/";
     public static final String FETAURE = "feature";
     public static final String LATITUDE = "latitude";
