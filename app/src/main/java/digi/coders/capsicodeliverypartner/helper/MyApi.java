@@ -84,6 +84,11 @@ public interface MyApi {
     Call<JsonArray> getOrder(@Field("delivery_boy_id") String merchantId, @Field("order_status") String orderStatus,@Field("page") String page);
 
     @FormUrlEncoded
+    @POST("return_orders")
+    Call<JsonArray> getReturnOrder(@Field("delivery_boy_id") String merchantId, @Field("order_status") String orderStatus,@Field("page") String page);
+
+
+    @FormUrlEncoded
     @POST("orderswithoutDetails")
     Call<JsonArray> getOrderwithoutDetails(@Field("delivery_boy_id") String merchantId, @Field("order_status") String orderStatus);
 
@@ -123,6 +128,10 @@ public interface MyApi {
     @FormUrlEncoded
     @POST("ordersStatus")
     Call<JsonArray> orderStatus(@Field("delivery_boy_id") String orderId, @Field("order_id") String merchantId, @Field("order_status") String orderStatus, @Field("pickeditem") String idList);
+
+    @FormUrlEncoded
+    @POST("returnordersStatus")
+    Call<JsonArray> returnOrderStatus(@Field("delivery_boy_id") String orderId, @Field("order_id") String merchantId, @Field("order_status") String orderStatus, @Field("pickeditem") String idList);
 
     @FormUrlEncoded
     @POST("otpVerification")

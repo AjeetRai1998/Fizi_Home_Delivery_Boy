@@ -42,6 +42,7 @@ import digi.coders.capsicodeliverypartner.fragment.HomeFragment;
 import digi.coders.capsicodeliverypartner.fragment.NewOrderFragment;
 import digi.coders.capsicodeliverypartner.fragment.OfflineFragment;
 import digi.coders.capsicodeliverypartner.fragment.OngoingFragment;
+import digi.coders.capsicodeliverypartner.fragment.ReturnsFragment;
 import digi.coders.capsicodeliverypartner.helper.FunctionClass;
 import digi.coders.capsicodeliverypartner.helper.LocationTrace;
 import digi.coders.capsicodeliverypartner.helper.MyApi;
@@ -129,6 +130,10 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
                     case R.id.wallet /* 2131362539 */:
                         DashboardActivity.this.fragment = new HomeFragment();
+                        DashboardActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.container, DashboardActivity.this.fragment, "h").commit();
+                        break;
+                    case R.id.returns: /* 2131362539 */
+                        DashboardActivity.this.fragment = new ReturnsFragment();
                         DashboardActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.container, DashboardActivity.this.fragment, "h").commit();
                         break;
                 }

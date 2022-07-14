@@ -2,5 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:icon="@drawable/home_selected" android:id="@+id/home" android:title="Home"/>
     <item android:icon="@drawable/ic_baseline_access_time_filled_24" android:id="@+id/wallet" android:title="Orders"/>
+    <item android:icon="@drawable/ic_baseline_replay_24" android:id="@+id/returns" android:title="Returns"/>
     <item android:icon="@drawable/persons" android:id="@+id/account" android:title="Account"/>
 </menu>
